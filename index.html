@@ -9,6 +9,16 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
   <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
   <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67874722-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 
   <title>X-CTF 2016 - NUS Greyhats</title>
 </head>
@@ -52,6 +62,9 @@
       .holder a {
         color:#0f0;   
       }
+      pre {
+        color: white;
+      }
       </style>
 
     </div>
@@ -69,74 +82,129 @@
 
       <hr>
       <h2> Announcement </h2>
-      <pre>Please note that we will be opening up the X-CTF Qualifiers registration to
-teams of 4 from any Singaporean school. The members of the team have to be from
-the same school. Since this means that there will be more than 11 schools
-(formerly, all the tietary institutions), the qualification rules are changing
-slightly.
-​
-Team scores will be based on number of points accrued first, and the time of the
-last flag submitted next. So between two teams who score the same points, the
-team that submitted the flag first will be ranked higher than the second team.
-​
-To select the 22 teams that will go on to the X-CTF Finals, we will take the top
-team from each of the distinct schools, and rank the schools according to the
-scores of these top teams. Finally, the top 2 teams from the top 11 ranked
-schools will go onto the Finals. In the case where there exists only one team
-from a school who places, we qualify one team from the next highest ranked
-school. This ensures that a maximum of two teams can represent their varsities.
-​
-As an example, we'll use 10 teams from 5 schools with 6 slots for the Finals
-with two slots per school:
-​
-Scoreboard:
-​
-1.  Team  1 - School A - 999 Pts
-2.  Team  2 - School C - 998 Pts
-3.  Team  3 - School B - 997 Pts
-4.  Team  4 - School D - 996 Pts
-5.  Team  5 - School A - 995 Pts
-6.  Team  6 - School A - 994 Pts
-7.  Team  7 - School E - 993 Pts
-8.  Team  8 - School D - 992 Pts
-9.  Team  9 - School E - 991 Pts
-10. Team 10 - School A - 990 Pts
-​
-First, we categorise the teams into their schools.
-​
-School A - Highest 999
-Team 1 (999), Team 5 (995), Team 6 (994), Team 10 (990)
-​
-School B - Highest 997
-Team 3 (997)
-​
-School C - Highest 998
-Team 2 (998)
-​
-School D - Highest 996
-Team 4 (996), Team 8 (992)
-​
-School E - Highest 993
-Team 7 (993), Team 9 (991)
-​
-Then, we rank the schools.
-​
-1. School A (4 Teams)
-2. School C (1 Team)
-3. School B (1 Team)
-4. School D (2 Teams)
-5. School E (2 Teams)
-​
-Now, we will determine the 6 slots that qualify.
-​
-1. Team 1 (School A)
-2. Team 5 (School A)
-3. Team 2 (School C)
-4. Team 3 (School B)
-5. Team 4 (School D)
-6. Team 8 (School D)
-</pre>
+      <p>Dear All Participants,</p>
+      <p>Thank you so much for participating in the X-CTF Online Qualifiers held from 9 April 2016 to 10 April 2016. Everyone has done extremely well and we are grateful that you have devoted your time over the weekend.</p>
 
+      <p>As certain tertiary institutions have not opted to send any teams, we are left with a surplus of slots for the finals. </p>
+
+      <p>The following institutions have no representative:</br>
+        1) Republic Polytechnic (RP)</br>
+        2) Singapore Institute of Technology (SIT)</br>
+        3) Singapore Institute of Management (SIM)</p>
+
+        <p>As there are no teams representing the institutes, the slots have automatically been  forfeited. Thus, we have decided to increase the limit of teams per school to 3 but maintain the 22 slots pre-allocated for the Finals.</p>
+        <p>It is our pleasure to present the qualifying teams (in alphabetical order):</p>
+
+        <table class="tg">
+          <tr>
+            <th class="tg-slkj">School</th>
+            <th class="tg-slkj">Team Name</th>
+            <th class="tg-slkj">Points in Qualifiers</th>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="3" style="vertical-align:middle;">Nanyang Polytechnic (NYP)</td>
+            <td class="tg-m2jw">DLAN</td>
+            <td class="tg-m2jw">86 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Missing</td>
+            <td class="tg-m2jw">8 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Bl@ck$had3s</td>
+            <td class="tg-m2jw">3 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="3" style="vertical-align:middle;">Nanyang Technological University (NTU)</td>
+            <td class="tg-m2jw">0x0ffff5ec</td>
+            <td class="tg-m2jw">204 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">1x0ffff5ec</td>
+            <td class="tg-m2jw">127 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">2x0ffff5ec</td>
+            <td class="tg-m2jw">102 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="3" style="vertical-align:middle;">National University of Singapore (NUS)</td>
+            <td class="tg-m2jw">Xiia0F1aGGer$</td>
+            <td class="tg-m2jw">229 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Never Gonna Give</td>
+            <td class="tg-m2jw">219 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Ω'</td>
+            <td class="tg-m2jw">194 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="3" style="vertical-align:middle;">Ngee Ann Polytechnic (NP)</td>
+            <td class="tg-m2jw">Gandalf the Hacker</td>
+            <td class="tg-m2jw">72 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Ultimate Novices</td>
+            <td class="tg-m2jw">31 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">J-NEX</td>
+            <td class="tg-m2jw">7 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="1" style="vertical-align:middle;">Others</td>
+            <td class="tg-m2jw">FengShui (RJC)</td>
+            <td class="tg-m2jw">143 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="2" style="vertical-align:middle;">Singapore Management University (SMU)</td>
+            <td class="tg-m2jw">Whitehats</td>
+            <td class="tg-m2jw">194 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Black Cats</td>
+            <td class="tg-m2jw">38 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="3" style="vertical-align:middle;">Singapore Polytechnic (SP)</td>
+            <td class="tg-m2jw">小笼包</td>
+            <td class="tg-m2jw">199 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Burden Overflow</td>
+            <td class="tg-m2jw">162 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">.append(0);</td>
+            <td class="tg-m2jw">143 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="1" style="vertical-align:middle;text-wrap:;">Singapore University of Technology and Design<br/>(SUTD)</td>
+            <td class="tg-m2jw">Kopipacket-Jr</td>
+            <td class="tg-m2jw">43 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="3" style="vertical-align:middle;">Temasek Polytechnic (TP)</td>
+            <td class="tg-m2jw">Axiom</td>
+            <td class="tg-m2jw">93 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">asdfghjkl</td>
+            <td class="tg-m2jw">57 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Team Doughnut</td>
+            <td class="tg-m2jw">52 Points</td>
+          </tr>
+        </table>
+        <p>We will be contacting the teams who have qualified separately with the details for the Finals.</p>
+
+        <p>Thank you.</p>
+
+        <p>Best regards,</br>NUS Greyhats</p>
+	  <hr>
       <h2> Competition Details </h2>
       <p>This competition is open to all students from tertiary institutions in Singapore. Participants are required to form a team of four to take part in the competition.<br/>
         Teams will then have to participate in the online qualifiers and only the top two teams from each institution (based on scores) will be selected to participate in the final competition. There will be a total of 88 students from 11 institutions competing in the final competition.
