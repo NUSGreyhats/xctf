@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://nusgreyhats.org/x-ctf/ -->
+<html lang="en"><script async="" src="./xctf2016_files/analytics.js.download"></script><script data-x-lastpass="">(function(){var c=0;if("undefined"!==typeof CustomEvent&&"function"===typeof window.dispatchEvent){var a=function(a){try{if("object"===typeof a&&(a=JSON.stringify(a)),"string"===typeof a)return window.dispatchEvent(new CustomEvent("lprequeststart",{detail:{data:a,requestID:++c}})),c}catch(f){}},b=function(a){try{window.dispatchEvent(new CustomEvent("lprequestend",{detail:a}))}catch(f){}};"undefined"!==typeof XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.send&&(XMLHttpRequest.prototype.send=
+function(c){return function(f){var d=this,e=a(f);e&&d.addEventListener("loadend",function(){b({requestID:e,statusCode:d.status})});return c.apply(d,arguments)}}(XMLHttpRequest.prototype.send));"function"===typeof fetch&&(fetch=function(c){return function(f,d){var e=a(d),g=c.apply(this,arguments);if(e){var h=function(a){b({requestID:e,statusCode:a&&a.status})};g.then(h)["catch"](h)}return g}}(fetch))}})();
+(function(){if("undefined"!==typeof CustomEvent){var c=function(a){if(a.lpsubmit)return a;var b=function(){try{this.dispatchEvent(new CustomEvent("lpsubmit"))}catch(k){}return a.apply(this,arguments)};b.lpsubmit=!0;return b};window.addEventListener("DOMContentLoaded",function(){if(document&&document.forms&&0<document.forms.length)for(var a=0;a<document.forms.length;++a)document.forms[a].submit=c(document.forms[a].submit)},!0);document.createElement=function(a){return function(){var b=a.apply(this,
+arguments);b&&"FORM"===b.nodeName&&b.submit&&(b.submit=c(b.submit));return b}}(document.createElement)}})();
+</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="shortcut icon" href="http://nusgreyhats.org/write-ups/favicon.png">
+
+  <link rel="stylesheet" type="text/css" href="./xctf2016_files/stylesheet.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="./xctf2016_files/github-dark.css" media="screen">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67874722-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <title>X-CTF 2016 - NUS Greyhats</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="holder">
+      <marquee><pre class="logo">     
+        ##     ##          ######  ######## ########     #######    #####      ##    #######  
+         ##   ##          ##    ##    ##    ##          ##     ##  ##   ##   ####   ##     ## 
+          ## ##           ##          ##    ##                 ## ##     ##    ##   ##        
+           ###    ####### ##          ##    ######       #######  ##     ##    ##   ########  
+          ## ##           ##          ##    ##          ##        ##     ##    ##   ##     ## 
+         ##   ##          ##    ##    ##    ##          ##         ##   ##     ##   ##     ## 
+        ##     ##          ######     ##    ##          #########   #####    ######  #######  
+      </pre></marquee>
+      <style type="text/css">
+      .logo {
+        overflow: visible;
+        border: 0px;
+      }
+      .holder {
+        box-shadow: 0px 0px 5px #999;
+        padding:40px;
+        padding-top:30px;
+        background: black;
+        font-family: "Andale Mono";
+      }
+      .holder p {
+        color:#0F0;
+        font-size:14px;
+        margin:0px;
+        padding:0px;
+      }
+      .holder .title {
+        color:white;
+        font-size:25px;
+        margin-top:0px;
+        margin-bottom:10px;
+      }
+      .holder a {
+        color:#0f0;   
+      }
+      pre {
+        color: white;
+      }
+      </style>
+
+    </div>
+
+    <section id="main_content">
+      <section id="intro">
+        <h1> Welcome to X-CTF 2016!</h1>
+
+
+        <p>X-CTF 2016 is a cyber security competition by NUS Greyhats that will be held in NUS School of Computing (SoC) on 18th June 2016. In the competition, student teams from various tertiary institutions will compete to solve challenges which are set by an independent body.</p>
+
+      </section>
+
+      <hr>
+      <h2> Announcement </h2>
+      <h3> Updates </h3>
+      <h4> Announcement #1 </h4>
+      <p>
+        We are aware that all local Polytechnics will be holding their Graduation Ceremony in May 2016, and after internal discussions, we've agreed that Polytechnic students whom are graduating in the year of 2016 shall be allowed to participate in the X-CTF finals. We apologize for the change in the regulations.
+      </p>
+      <h4> Announcement #2 </h4>
+      <p>Dear All Participants,</p>
+      <p>Thank you so much for participating in the X-CTF Online Qualifiers held from 9 April 2016 to 10 April 2016. Everyone has done extremely well and we are grateful that you have devoted your time over the weekend.</p>
+
+      <p>The following institutions have no representative:<br>
+        1) Republic Polytechnic (RP)<br>
+        2) Singapore Institute of Technology (SIT)<br>
+        3) Singapore Institute of Management (SIM)</p>
+
+        <p>As there are no teams representing the aforementioned institutions, their slots have automatically been forfeited. Thus, we have decided to increase the limit of teams per school to 3 but maintain the 22 slots pre-allocated for the Finals.</p>
+        <p>It is our pleasure to present the qualifying teams (in alphabetical order):</p>
+
+        <table class="tg">
+          <tbody><tr>
+            <th class="tg-slkj">School</th>
+            <th class="tg-slkj">Team Name</th>
+            <th class="tg-slkj">Points in Qualifiers</th>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="3" style="vertical-align:middle;">Nanyang Polytechnic (NYP)</td>
+            <td class="tg-m2jw">DLAN</td>
+            <td class="tg-m2jw">86 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Missing</td>
+            <td class="tg-m2jw">8 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Bl@ck$had3s</td>
+            <td class="tg-m2jw">3 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="3" style="vertical-align:middle;">Nanyang Technological University (NTU)</td>
+            <td class="tg-m2jw">0x0ffff5ec</td>
+            <td class="tg-m2jw">204 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">1x0ffff5ec</td>
+            <td class="tg-m2jw">127 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">2x0ffff5ec</td>
+            <td class="tg-m2jw">102 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="3" style="vertical-align:middle;">National University of Singapore (NUS)</td>
+            <td class="tg-m2jw">Xiia0F1aGGer$</td>
+            <td class="tg-m2jw">229 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Never Gonna Give</td>
+            <td class="tg-m2jw">219 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Ω'</td>
+            <td class="tg-m2jw">194 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="3" style="vertical-align:middle;">Ngee Ann Polytechnic (NP)</td>
+            <td class="tg-m2jw">Gandalf the Hacker</td>
+            <td class="tg-m2jw">72 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Ultimate Novices</td>
+            <td class="tg-m2jw">31 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">J-NEX</td>
+            <td class="tg-m2jw">7 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="1" style="vertical-align:middle;">Others</td>
+            <td class="tg-m2jw">FengShui (RJC)</td>
+            <td class="tg-m2jw">143 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="2" style="vertical-align:middle;">Singapore Management University (SMU)</td>
+            <td class="tg-m2jw">Whitehats</td>
+            <td class="tg-m2jw">194 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Black Cats</td>
+            <td class="tg-m2jw">38 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="3" style="vertical-align:middle;">Singapore Polytechnic (SP)</td>
+            <td class="tg-m2jw">小笼包</td>
+            <td class="tg-m2jw">199 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Burden Overflow</td>
+            <td class="tg-m2jw">162 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">.append(0);</td>
+            <td class="tg-m2jw">143 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="1" style="vertical-align:middle;text-wrap:;">Singapore University of Technology and Design<br>(SUTD)</td>
+            <td class="tg-m2jw">Kopipacket-Jr</td>
+            <td class="tg-m2jw">43 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw" rowspan="3" style="vertical-align:middle;">Temasek Polytechnic (TP)</td>
+            <td class="tg-m2jw">Axiom</td>
+            <td class="tg-m2jw">93 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">asdfghjkl</td>
+            <td class="tg-m2jw">57 Points</td>
+          </tr>
+          <tr>
+            <td class="tg-m2jw">Team Doughnut</td>
+            <td class="tg-m2jw">52 Points</td>
+          </tr>
+        </tbody></table>
+        <p>We will be contacting the teams who have qualified separately with the details for the Finals.</p>
+
+        <p>Thank you.</p>
+
+        <p>Best regards,<br>NUS Greyhats</p>
+	  <hr>
+      <h2> Competition Details </h2>
+      <p>This competition is open to all students from tertiary institutions in Singapore. Participants are required to form a team of four to take part in the competition.<br>
+        Teams will then have to participate in the online qualifiers and only the top two teams from each institution (based on scores) will be selected to participate in the final competition. There will be a total of 88 students from 11 institutions competing in the final competition.
+        <br><br>
+
+        The final competition will take place on-site at NUS School of Computing Seminar Room 1.
+        <br><br>
+        Participants are required to bring and utilize their own laptop(s) and equipment(s) for any activity/competition.
+      </p>
+
+      <h3> Qualifiers Details </h3>
+      <p> The qualifiers for X-CTF will begin from 9th April 2016 0000 hrs until 10th April 2016 2359 hrs, lasting 48 hours in total.<br><br>
+       More details will be released through e-mail at a later date.</p>
+
+       <h3>So what exactly is X-CTF? </h3>
+       <p>"X-CTF" stands for "Cross Varsity - Capture The Flag" competition. It is a cyber security competition organized annually where teams from the tertiary institutions are welcome to participate. The competition will be held for a duration of eight hours and each team will be given a set of challenges to solve in order to retrieve a "flag". A correct flag grants points upon submission and the team with the highest amount of points will be crowned the champion.</p>
+
+       <h3>Rules of X-CTF</h3>
+       <p>During the CTF,
+        </p><li> Do not attack the PCs of other competitors. </li>
+        <li> Do not attack the scoring server. </li>
+        <li> Do not attack anything outside of the CTF environment. </li>
+        <li> Do not delete or modify flags. </li>
+        <li> ARP poisoning or any form of man-in-the-middle attack is prohibited. This action is subject to disqualification. </li>
+        <li> Sharing flags or solutions is prohibited. This action is subject to disqualification. </li>
+        <li> Brute-forcing flags will not be tolerated. </li>
+        <li> Denial of service attacks on any challenge will not be tolerated, unless the challenge calls for such an attack. </li>
+        <li> If you find any bug in the system, let us know. We might give you some bonus points. </li>
+        <li> Organizers' decision is final. </li>
+      <p></p>
+
+      <h2> Timeline of Event </h2>
+      <style type="text/css">
+      .tg  {border-collapse:collapse;border-spacing:0;}
+      .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+      .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+      .tg .tg-slkj{font-family:"Lucida Console", Monaco, monospace !important;;text-align:center}
+      .tg .tg-m2jw{font-family:"Lucida Console", Monaco, monospace !important;;text-align:center;vertical-align:top}
+      </style>
+      <table class="tg">
+        <tbody><tr>
+          <th class="tg-slkj">Date</th>
+          <th class="tg-slkj">Event</th>
+        </tr>
+        <tr>
+          <td class="tg-slkj">08/04/2016 (Fri)</td>
+          <td class="tg-slkj">Registration Closes</td>
+        </tr>
+        <tr>
+          <td class="tg-m2jw">09/04/2016, 0000hrs (Sat)</td>
+          <td class="tg-m2jw">Start of Qualifiers</td>
+        </tr>
+        <tr>
+          <td class="tg-m2jw">10/04/2016, 2359hrs (Sun)</td>
+          <td class="tg-m2jw">Closing of Qualifiers</td>
+        </tr>
+        <tr>
+          <td class="tg-m2jw">11/04/2016 (Mon)</td>
+          <td class="tg-m2jw">Announcement of Qualifiers Result</td>
+        </tr>
+        <tr>
+          <td class="tg-m2jw">18/06/2016 (Sat)</td>
+          <td class="tg-m2jw">X-CTF 2016</td>
+        </tr>
+      </tbody></table>
+
+      <h2> Competition Day </h2>
+      <p>So what happens on the actual X-CTF? Below is an overview of the entire event.</p>
+
+      <style type="text/css">
+      .tg  {border-collapse:collapse;border-spacing:0;}
+      .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+      .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+      .tg .tg-slkj{font-family:"Lucida Console", Monaco, monospace !important;;text-align:center}
+      .tg .tg-kkwu{font-weight:bold;font-family:"Lucida Console", Monaco, monospace !important;;text-align:center}
+      .tg .tg-m2jw{font-family:"Lucida Console", Monaco, monospace !important;;text-align:center;vertical-align:top}
+      </style>
+      <table class="tg">
+        <tbody><tr>
+          <th class="tg-kkwu">Time</th>
+          <th class="tg-slkj">Programme</th>
+        </tr>
+        <tr>
+          <td class="tg-slkj">0830hrs - 0900hrs</td>
+          <td class="tg-slkj">Registration</td>
+        </tr>
+        <tr>
+          <td class="tg-slkj">0900hrs - 0930hrs</td>
+          <td class="tg-slkj">Welcome Address and Competition Briefing</td>
+        </tr>
+        <tr>
+          <td class="tg-slkj">0930hrs - 1730hrs</td>
+          <td class="tg-slkj">X-CTF Competition*</td>
+        </tr>
+        <tr>
+          <td class="tg-slkj">1730hrs - 1800hrs</td>
+          <td class="tg-slkj">Tea Break &amp; Networking</td>
+        </tr>
+        <tr>
+          <td class="tg-slkj">1800hrs - 1830hrs</td>
+          <td class="tg-slkj">Results Announcement &amp; Prize Presentation</td>
+        </tr>
+        <tr>
+          <td class="tg-m2jw">1830hrs</td>
+          <td class="tg-m2jw">End of Programme</td>
+        </tr>
+      </tbody></table>
+
+      <p><i>*Note: <br>
+        1. Lunch will be catered and will be served at 1200hrs. Participants will be informed of arrival of food and are to consume it at their own discretion within the recommended safe for consumption period.</i></p>
+        <p><i>2. Venue of Competition: X-CTF is expected to be held at NUS SoC Seminar Room 1. Details may be updated periodically.</i></p>
+
+        <hr>
+
+        <h2>Prizes</h2>
+        <p>And the section you are eagerly waiting for... PRIZES!</p>
+        <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+        .tg .tg-slkj{font-family:"Lucida Console", Monaco, monospace !important;;text-align:center}
+        .tg .tg-kkwu{font-weight:bold;font-family:"Lucida Console", Monaco, monospace !important;;text-align:center}
+        </style>
+        <table class="tg">
+          <tbody><tr>
+            <th class="tg-kkwu">Standings</th>
+            <th class="tg-kkwu">Prizes</th>
+          </tr>
+          <tr>
+            <td class="tg-slkj">1st Place</td>
+            <td class="tg-slkj">Challenge Trophy + SGD $4,000 cash</td>
+          </tr>
+          <tr>
+            <td class="tg-slkj">2nd Place</td>
+            <td class="tg-slkj">SGD $2,000 cash</td>
+          </tr>
+          <tr>
+            <td class="tg-slkj">Third Place</td>
+            <td class="tg-slkj">SGD $1,000 cash</td>
+          </tr>
+        </tbody></table>
+
+        <h2> Sponsors </h2>
+        <h3> Platinum Sponsor </h3>
+        <div align="center">
+          <a href="https://www.vantagepoint.sg/" alt="Vantage Point Security Pte. Ltd."><img src="./xctf2016_files/VantagePoint.png" alt="Vantage Point Security Pte. Ltd." style="width:70%;"></a>
+        </div>
+        <h3> Gold Sponsors </h3>  
+        <div align="center">
+          <a href="http://www.bofaml.com/" alt="Bank of America Merrill Lynch"><img alt="Bank of America Merrill Lynch" src="./xctf2016_files/baml.jpg" style="width:37%;background-color:white;padding:0px;"></a>
+          <a href="https://www.csa.gov.sg/" alt="Cyber Security Agency"><img alt="Cyber Security Agency" src="./xctf2016_files/CSA.jpg" style="width:30%;background-color:white;padding:4.5px;margin:20px 0px 0px;"></a>
+          <a href="http://cybertestsystems.com/" alt="Cyber Test Systems"><img alt="Cyber Test Systems" src="./xctf2016_files/cybertestsystems.png" style="width:43%;padding:5px;"></a>
+        </div>
+        <div align="center">
+        </div>
+
+        <h2> About the Organisers </h2>
+        <p>X-CTF 2016 is organised by NUS Greyhats. NUS Greyhats is a special interest group designed to spark students’ interest in information security and advance the level of security proficiency towards the aim of contributing to the growing need for cyber defenders in the government and private sectors.
+        </p>
+
+        <p>
+          NUS Greyhats is a special interest group under the School of Computing, National University of Singapore.
+        </p>
+
+        <h2>Contact Us</h2>
+        <p>You can find out more about NUS Greyhats <a href="http://nusgreyhats.org/">here</a>.
+          If you have any enquiries or requests, feel free to <a href="mailto:contact@nusgreyhats.org"> email</a> us.
+        </p>
+        <div align="center">
+          <a href="http://www.comp.nus.edu.sg/" alt="School of Computing"><img alt="School of Computing" src="./xctf2016_files/soc.png" style="width:50%;padding:0px;"></a>
+        </div>
+      </section></div>
+      
+    
+    
+</body></html>
